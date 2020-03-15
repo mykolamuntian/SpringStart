@@ -8,28 +8,22 @@ import java.util.List;
 
 @Component
 public class MusicPlayer {
-    @Autowired
-    private Music music;
-
-
+    private ClassicMusic classicMusic;
+    private RockMusic rockMusic;
 
     private String name;
     private int volume;
 
     private List<Music> musicList = new ArrayList<>();
 
-//    public MusicPlayer(Music music) {
-//        this.music = music;
-//    }
+    @Autowired
+    public MusicPlayer(ClassicMusic classicMusic, RockMusic rockMusic) {
+        this.classicMusic = classicMusic;
+        this.rockMusic = rockMusic;
+    }
 
-//    @Autowired
-//    public void setMusic(Music music){
-//        this.music = music;
-//        System.out.println("setter");
-//    }
-
-    public void playMusic() {
-        System.out.println("Current track is: " + music.getSong());
+    public String playMusic() {
+        return "Current track is: " + classicMusic.getSong();
     }
 
     public void playMusicList() {

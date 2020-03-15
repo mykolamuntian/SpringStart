@@ -8,8 +8,11 @@ public class Main {
                 "applicationContext.xml"
         );
 
-        MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
-        musicPlayer.playMusic();
+        Computer computer = context.getBean("computer", Computer.class);
+        System.out.println(computer);
+
+//        MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
+//        musicPlayer.playMusic();
 //        ClassicMusic classicMusic = context.getBean("classicMusic", ClassicMusic.class);
 //        RockMusic classicMusic1 = context.getBean("rockMusic", RockMusic.class);
 //

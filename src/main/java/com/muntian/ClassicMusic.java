@@ -1,7 +1,7 @@
 package com.muntian;
 
 import org.springframework.stereotype.Component;
-
+@Component
 public class ClassicMusic implements Music {
 
     private ClassicMusic (){}
